@@ -1,0 +1,58 @@
+{
+  "name": "gbf-raidfinder",
+  "version": "1.0.0",
+  "description": "JavaScript library for tracking Granblue Fantasy raid tweets from Twitter",
+  "main": "build/index.js",
+  "scripts": {
+    "codecov": "codecov",
+    "build": "tsc",
+    "test": "jest",
+    "test:coverage": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Frizz925/gbf-raidfinder-js.git"
+  },
+  "keywords": [
+    "gbf",
+    "granblue",
+    "fantasy",
+    "raid",
+    "tweet",
+    "twitter"
+  ],
+  "author": "Izra Faturrahman <Frizz925@hotmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Frizz925/gbf-raidfinder-js/issues"
+  },
+  "homepage": "https://github.com/Frizz925/gbf-raidfinder-js#readme",
+  "dependencies": {
+    "gbf-raidfinder-parser": "github:frizz925/gbf-raidfinder-parser",
+    "twitter": "^1.7.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^22.1.0",
+    "@types/node": "^9.3.0",
+    "codecov": "^3.0.0",
+    "dotenv": "^4.0.0",
+    "jest": "^22.1.4",
+    "ts-jest": "^22.0.1",
+    "tsc": "^1.20150623.0",
+    "tslint": "^5.9.1",
+    "typescript": "^2.6.2"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "\\.(ts|tsx)$": "ts-jest"
+    },
+    "testMatch": [
+      "<rootDir>/test/**/*.(spec|test).(ts|tsx|js)"
+    ]
+  }
+}
