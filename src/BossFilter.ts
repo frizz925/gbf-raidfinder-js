@@ -23,15 +23,6 @@ function parseFromFilter(boss: BossFilter): Boss {
   return new Boss(name);
 }
 
-function getBossLevel(boss: BossFilter): number | null {
-  if (boss.level) { return boss.level; }
-  try {
-    return parseFromFilter(boss).level;
-  } catch (e) {
-    return null;
-  }
-}
-
 export function parse(boss: BossFilter | string): BossFilter {
   if (typeof boss === 'object') {
     if (!boss.level) {

@@ -2,6 +2,9 @@
   "compilerOptions": {
     "target": "es5",
     "module": "commonjs",
-    "strict": true
+    "moduleResolution": "node",
+    "strict": true,
+    "outDir": "./build",
+    "sourceRoot": "./src"
   }
 }

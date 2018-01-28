@@ -4,36 +4,35 @@ import { celesteOmega } from './stubs';
 describe('Test the builder', () => {
   const builder = new SearchBuilder();
 
-  function stringTest(track: string, level: number, text?: string) {
+  function stringTest(track: string, text?: string) {
     expect(typeof track).toEqual('string');
     if (text) {
-      expect(track).toContain(`"${text}"`);
-      expect(track).toContain('OR');
+      expect(track).toContain(text);
     }
-    expect(track).toContain(`Lv${level}`);
   }
 
   it('test with English string', () => {
     const track = builder.track(celesteOmega.complete.en);
-    stringTest(track, celesteOmega.level, celesteOmega.complete.en);
+    stringTest(track, celesteOmega.complete.en);
   });
   it('test with Japanese string', () => {
     const track = builder.track(celesteOmega.complete.jp);
-    stringTest(track, celesteOmega.level);
+    stringTest(track);
   });
   it('test with object', () => {
     let track = builder.track({
       level: celesteOmega.level,
       name: celesteOmega.name
     });
-    stringTest(track, celesteOmega.level, celesteOmega.complete.en);
+    stringTest(track, celesteOmega.complete.en);
+    stringTest(track, celesteOmega.complete.jp);
 
     // test with jp only name
     track = builder.track({
       name: {
-        jp: celesteOmega.name.jp
+        jp: celesteOmega.complete.jp
       }
     });
-    stringTest(track, celesteOmega.level);
+    stringTest(track, celesteOmega.complete.jp);
   });
 });
