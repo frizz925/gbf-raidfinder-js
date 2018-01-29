@@ -6,12 +6,12 @@ import BossFilter, { parse as parseToFilter } from './BossFilter';
 import SearchBuilder from './SearchBuilder';
 import TwitterCredentials from './TwitterCredentials';
 
-interface BossParameter {
+export interface BossParameter {
   [key: string]: string
 }
 
-type BossParameters = Array<BossParameter|string> | BossParameter | string;
-type StreamCallback = (stream: EventEmitter) => void;
+export type BossParameters = Array<BossParameter|string> | BossParameter | string;
+export type StreamCallback = (stream: EventEmitter) => void;
 
 export default class Raidfinder {
   private client: Twitter;
