@@ -5,26 +5,15 @@ import { celesteOmega } from './stubs';
 describe('Test raidfinder', () => {
   dotenv.config();
 
-  function raidfinderTest(cb: jest.DoneCallback) {
-    const stream = new Raidfinder({
+  it('test tweet streaming', (cb) => {
+    new Raidfinder({
       access_token_key: process.env.ACCESS_TOKEN,
       access_token_secret: process.env.ACCESS_TOKEN_SECRET,
       consumer_key: process.env.CONSUMER_KEY,
       consumer_secret: process.env.CONSUMER_SECRET
-    }).stream(celesteOmega.complete.en);
-
-    if (!stream) {
-      return cb.fail("Can't make stream");
-    }
-
-    stream.on('data', data => {
+    }).stream(celesteOmega.complete.en, (err, tweet, stream) => {
+      stream.destroy();
       cb();
     });
-
-    stream.on('error', error => {
-      cb.fail(error);
-    });
-  }
-
-  it('test tweet streaming', raidfinderTest, 60000);
+  }, 60000);
 });

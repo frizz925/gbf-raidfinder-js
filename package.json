@@ -39,7 +39,7 @@
     "@types/node": "^9.3.0",
     "@types/request": "^2.0.13",
     "codecov": "^3.0.0",
-    "dotenv": "^4.0.0",
+    "dotenv": "^5.0.0",
     "jest": "^22.1.4",
     "ts-jest": "^22.0.1",
     "ts-node": "^4.1.0",
