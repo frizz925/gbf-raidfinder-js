@@ -6,6 +6,7 @@
   "scripts": {
     "codecov": "codecov",
     "build": "tsc",
+    "lint": "tslint -c tslint.json 'src/**/*.ts' 'test/**/*.ts'",
     "test": "jest",
     "test:coverage": "jest --coverage"
   },
@@ -29,8 +30,8 @@
   "homepage": "https://github.com/Frizz925/gbf-raidfinder-js#readme",
   "dependencies": {
     "deep-extend": "^0.5.0",
-    "gbf-raidfinder-parser": "github:frizz925/gbf-raidfinder-parser",
-    "twitter": "github:frizz925/node-twitter"
+    "gbf-raidfinder-parser": "github:Frizz925/gbf-raidfinder-parser",
+    "twitter": "github:Frizz925/node-twitter"
   },
   "devDependencies": {
     "@types/deep-extend": "^0.4.31",
