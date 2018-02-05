@@ -1,5 +1,4 @@
 import * as deepExtend from 'deep-extend';
-import { EventEmitter } from 'events';
 import * as TweetParser from 'gbf-raidfinder-parser';
 import * as Twitter from 'twitter';
 import BossFilter, { parse as parseToFilter } from './BossFilter';
@@ -40,7 +39,6 @@ export default class Raidfinder {
 
   public stream(bosses: BossParameters, callback: StreamCallback): Twitter.Stream {
     if (!Array.isArray(bosses)) { bosses = [bosses]; }
-    const emitter = new EventEmitter();
     const track = bosses
       .map((boss) => this.parameterToFilter(boss))
       .map((boss) => this.builder.track(boss))
