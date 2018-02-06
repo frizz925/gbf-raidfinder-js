@@ -5,6 +5,7 @@
   "main": "build/index.js",
   "scripts": {
     "codecov": "codecov",
+    "install": "npm run build",
     "build": "tsc",
     "lint": "tslint -c tslint.json 'src/**/*.ts' 'test/**/*.ts'",
     "test": "jest",
