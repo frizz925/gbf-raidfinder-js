@@ -30,16 +30,16 @@
   },
   "homepage": "https://github.com/Frizz925/gbf-raidfinder-js#readme",
   "dependencies": {
-    "deep-extend": "^0.5.0",
-    "gbf-raidfinder-parser": "github:frizz925/gbf-raidfinder-parser",
-    "twitter": "github:frizz925/node-twitter"
-  },
-  "devDependencies": {
     "@types/deep-extend": "^0.4.31",
     "@types/dotenv": "^4.0.2",
     "@types/jest": "^22.1.0",
     "@types/node": "^9.3.0",
     "@types/request": "^2.0.13",
+    "deep-extend": "^0.5.0",
+    "gbf-raidfinder-parser": "github:frizz925/gbf-raidfinder-parser",
+    "twitter": "github:frizz925/node-twitter"
+  },
+  "devDependencies": {
     "codecov": "^3.0.0",
     "dotenv": "^5.0.0",
     "jest": "^22.1.4",
