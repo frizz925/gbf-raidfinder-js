@@ -1,11 +1,12 @@
 {
   "name": "gbf-raidfinder",
   "version": "1.0.0",
-  "description": "JavaScript library for tracking Granblue Fantasy raid tweets from Twitter",
+  "description":
+    "JavaScript library for tracking Granblue Fantasy raid tweets from Twitter",
   "main": "build/index.js",
   "scripts": {
     "codecov": "codecov",
-    "install": "npm run build",
+    "prepare": "npm run build",
     "build": "tsc",
     "lint": "tslint -c tslint.json 'src/**/*.ts' 'test/**/*.ts'",
     "test": "jest",
@@ -15,14 +16,7 @@
     "type": "git",
     "url": "git+https://github.com/Frizz925/gbf-raidfinder-js.git"
   },
-  "keywords": [
-    "gbf",
-    "granblue",
-    "fantasy",
-    "raid",
-    "tweet",
-    "twitter"
-  ],
+  "keywords": ["gbf", "granblue", "fantasy", "raid", "tweet", "twitter"],
   "author": "Izra Faturrahman <Frizz925@hotmail.com>",
   "license": "MIT",
   "bugs": {
@@ -30,14 +24,14 @@
   },
   "homepage": "https://github.com/Frizz925/gbf-raidfinder-js#readme",
   "dependencies": {
+    "@frizz925/twitter": "^1.7.3",
     "@types/deep-extend": "^0.4.31",
     "@types/dotenv": "^4.0.2",
     "@types/jest": "^22.1.0",
     "@types/node": "^9.3.0",
     "@types/request": "^2.0.13",
     "deep-extend": "^0.5.0",
-    "gbf-raidfinder-parser": "github:frizz925/gbf-raidfinder-parser",
-    "twitter": "github:frizz925/node-twitter"
+    "gbf-raidfinder-parser": "^1.0.2"
   },
   "devDependencies": {
     "codecov": "^3.0.0",
@@ -50,16 +44,10 @@
     "typescript": "^2.6.2"
   },
   "jest": {
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js"
-    ],
+    "moduleFileExtensions": ["ts", "tsx", "js"],
     "transform": {
       "\\.(ts|tsx)$": "ts-jest"
     },
-    "testMatch": [
-      "<rootDir>/test/**/*.(spec|test).(ts|tsx|js)"
-    ]
+    "testMatch": ["<rootDir>/test/**/*.(spec|test).(ts|tsx|js)"]
   }
 }

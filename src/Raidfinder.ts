@@ -1,6 +1,6 @@
+import * as Twitter from '@frizz925/twitter';
 import * as deepExtend from 'deep-extend';
 import * as TweetParser from 'gbf-raidfinder-parser';
-import * as Twitter from 'twitter';
 import BossFilter, { parse as parseToFilter } from './BossFilter';
 import { TWEET_SOURCE } from './Constants';
 import SearchBuilder from './SearchBuilder';
