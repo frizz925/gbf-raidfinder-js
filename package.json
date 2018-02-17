@@ -43,6 +43,7 @@
     "codecov": "^3.0.0",
     "dotenv": "^5.0.0",
     "jest": "^22.3.0",
+    "standard-version": "^4.3.0",
     "ts-jest": "^22.0.4",
     "ts-node": "^4.1.0",
     "tslint": "^5.9.1",
