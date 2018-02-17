@@ -67,7 +67,7 @@ export default class Raidfinder {
   }
 
   public filter(tweet: Tweet): boolean {
-    return tweet.source === TWEET_SOURCE;
+    return tweet.source === TWEET_SOURCE && TweetParser.isRaidTweet(tweet.text);
   }
 
   public parse(tweet: Tweet): TweetParser.RaidTweet {

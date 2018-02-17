@@ -2,14 +2,18 @@ import BossFilter, {parse as parseToFilter} from './BossFilter';
 
 export default class SearchBuilder {
   public track(boss: BossFilter | string): string {
-    boss = parseToFilter(boss);
-    const track: string[] = [];
-    const levels = (boss.levels || [boss.level]).map((level) => 'Lv' + level);
-    if (boss.name.en && boss.level) { 
-      track.push(`Lvl ${boss.level} ${boss.name.en}`); 
+    const parsed = parseToFilter(boss);
+    if (!parsed) {
+      throw TypeError("Can't parse the boss filter!");
     }
-    if (boss.name.jp && boss.level) { 
-      track.push(`Lv${boss.level} ${boss.name.jp}`); 
+
+    const track: string[] = [];
+    const levels = (parsed.levels || [parsed.level]).map((level) => 'Lv' + level);
+    if (parsed.name.en && parsed.level) { 
+      track.push(`Lvl ${parsed.level} ${parsed.name.en}`); 
+    }
+    if (parsed.name.jp && parsed.level) { 
+      track.push(`Lv${parsed.level} ${parsed.name.jp}`); 
     }
     return track.join(',');
   }

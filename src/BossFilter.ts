@@ -1,4 +1,4 @@
-import { Boss } from 'gbf-raidfinder-parser';
+import { Boss, BossParser } from 'gbf-raidfinder-parser';
 import { ALL_LEVELS } from './Constants';
 
 export default interface BossFilter {
@@ -20,10 +20,10 @@ function parseFromFilter(boss: BossFilter): Boss {
   if (!name) {
     throw new TypeError('Can\'t determine the boss name!');
   }
-  return new Boss(name);
+  return BossParser.parse(name);
 }
 
-export function parse(boss: BossFilter | string): BossFilter {
+export function parse(boss: BossFilter | string): BossFilter | null {
   if (typeof boss === 'object') {
     if (!boss.level) {
       try {
@@ -37,7 +37,9 @@ export function parse(boss: BossFilter | string): BossFilter {
       boss.levels = [boss.level];
     }
   } else {
-    const parsed = Boss.parse(boss);
+    const parsed = BossParser.parse(boss);
+    if (!parsed.language || !parsed.name) { return null; }
+
     boss = {
       level: parsed.level,
       levels: [parsed.level],
