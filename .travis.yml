@@ -5,3 +5,9 @@ script:
   - npm run test:coverage
 after_success:
   - npm run codecov
+deploy:
+  provider: npm
+  email: Frizz925@hotmail.com
+  api_key: $NPM_TOKEN 
+  on:
+    tags: true
