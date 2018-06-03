@@ -31,15 +31,15 @@
   "homepage": "https://github.com/Frizz925/gbf-raidfinder-js#readme",
   "dependencies": {
     "@frizz925/twitter": "^1.7.3",
+    "deep-extend": "^0.5.0",
+    "gbf-raidfinder-parser": "^1.1.1"
+  },
+  "devDependencies": {
     "@types/deep-extend": "^0.4.31",
     "@types/dotenv": "^4.0.2",
     "@types/jest": "^22.1.3",
     "@types/node": "^9.4.6",
     "@types/request": "^2.47.0",
-    "deep-extend": "^0.5.0",
-    "gbf-raidfinder-parser": "^1.1.1"
-  },
-  "devDependencies": {
     "codecov": "^3.0.0",
     "dotenv": "^5.0.0",
     "jest": "^22.3.0",
