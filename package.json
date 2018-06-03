@@ -1,8 +1,9 @@
 {
   "name": "gbf-raidfinder",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "JavaScript library for tracking Granblue Fantasy raid tweets from Twitter",
   "main": "build/index.js",
+  "types": "./build/index.d.ts",
   "scripts": {
     "codecov": "codecov",
     "prepare": "npm run build",
