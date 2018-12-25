@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.0.2"></a>
+## [2.0.2](https://github.com/Frizz925/gbf-raidfinder-js/compare/v2.0.1...v2.0.2) (2018-12-25)
+
+
+### Bug Fixes
+
+* **npm:** Add missing package-lock.json ([444555d](https://github.com/Frizz925/gbf-raidfinder-js/commit/444555d))
+
+
+
 <a name="2.0.1"></a>
 ## [2.0.1](https://github.com/Frizz925/gbf-raidfinder-js/compare/v2.0.0...v2.0.1) (2018-12-25)
 
